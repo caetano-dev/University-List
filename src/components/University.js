@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import styles from "../styles/components/styles.module.css";
+import styles from "../styles/components/University.module.css";
 
 function University(props) {
   const [universityName, setUniversityName] = useState([]);
