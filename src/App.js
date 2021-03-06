@@ -1,10 +1,12 @@
 import React from "react";
-import SearchBar from "./components/SearchBar";
 import "./styles/App.css";
+import SearchBar from "./components/SearchBar";
+import Header from "./components/Header"
 
 export default function App() {
   return(
     <>
+    <Header/>
     <SearchBar/>
     </>
   )
