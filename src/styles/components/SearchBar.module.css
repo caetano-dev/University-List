@@ -1,0 +1,33 @@
+.SearchBar{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem
+}
+
+.SearchBar input, button{
+    height: 2.5rem;
+    border: 0px;
+    outline: none;
+}
+
+.SearchBar input{
+    width: 50%;
+    border-radius: .5rem 0rem 0rem .5rem ;
+    padding-left: 1rem
+}
+.SearchBar button{
+    border-radius: 0rem .5rem .5rem 0rem ;
+    width: 5rem;
+    transition: 0.5s
+}
+.SearchBar button:hover{
+    background-color: rgb(218, 218, 218);
+    cursor: pointer;
+}
+.University{
+    text-align: center;
+    margin-top: 1rem;
+}
+.University h1{
+color: rgb(24, 22, 146);
+}
