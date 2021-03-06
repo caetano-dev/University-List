@@ -2,13 +2,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 import styles from "../styles/components/styles.module.css";
 
-function University() {
+function University(props) {
   const [universityName, setUniversityName] = useState([]);
   const [load, setLoad] = useState(true);
 
   const getUniversities = async () => {
     const response = await fetch(
-      "http://universities.hipolabs.com/search?country=Brazil",
+      `http://universities.hipolabs.com/search?country=${props.country}`,
       {
         method: "GET",
       }
@@ -16,7 +16,6 @@ function University() {
     const universities = await response.json();
     setUniversityName(universities);
     setLoad(false);
-    console.log(universities);
   };
   useEffect(() => {
     getUniversities();
