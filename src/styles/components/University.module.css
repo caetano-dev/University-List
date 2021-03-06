@@ -1,19 +1,18 @@
-.Container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.University{
-    margin: 2rem;
-    padding: 2rem;
-
-    border: 1px solid black;
+.University {
+  margin: 1rem 2rem;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
 }
 
-.University h3{
-    word-break: keep-all;
+.University h3 {
+  word-break: keep-all;
 }
-.University a{
-    text-decoration: none;
-
+.University a {
+  text-decoration: none;
 }
