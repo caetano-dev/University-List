@@ -1,12 +1,11 @@
 import React from "react";
-
+import SearchBar from "./components/SearchBar";
 import "./styles/App.css";
-import University from "./components/University";
 
 export default function App() {
   return(
     <>
-    <University/>
+    <SearchBar/>
     </>
   )
 }
