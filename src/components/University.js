@@ -23,14 +23,15 @@ function University(props) {
   if (load) {
     return (
       <>
-        <div className="loading">
-          <h1>Loading...</h1>
+        <div>
+          <h1 className={styles.Loading}>Loading...</h1>
         </div>
       </>
     );
   }
   return (
     <>
+      <h2>{universityName.length} universities found.</h2>
       <div className={styles.Container}>
         {universityName.map((university) => {
           return (
