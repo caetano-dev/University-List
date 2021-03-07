@@ -26,14 +26,11 @@ button {
   cursor: pointer;
 }
 .University {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-top: 1rem;
 }
 .University h1 {
   color: rgb(3, 0, 90);
-}
-.University p {
-  border: 1px solid red;
-  color: rgb(0, 0, 0);
-  margin-bottom: 3rem;
 }
