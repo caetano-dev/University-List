@@ -10,7 +10,7 @@
     rgb(45, 136, 255) 50%,
     rgb(34, 95, 187) 100%
   );
-
+  width: 23rem;
   box-shadow: 2px 2px 1px;
   margin: 1rem 1rem;
   padding: 2rem;
@@ -27,4 +27,9 @@
 }
 .University a {
   text-decoration: none;
+}
+@media (max-width: 860px) {
+  .University {
+    width: 10rem;
+  }
 }

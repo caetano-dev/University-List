@@ -10,3 +10,8 @@
   font-size: 1.2rem;
   color: rgb(0, 0, 0);
 }
+@media (max-width: 860px) {
+  .Header h1 {
+    font-size: 1.5rem;
+  }
+}
