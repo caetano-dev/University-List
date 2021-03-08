@@ -35,7 +35,7 @@ function University(props) {
       <div className={styles.Container}>
         {universityName.map((university) => {
           return (
-            <div class={styles.University} key={university.name}>
+            <div className={styles.University} key={Math.random()}>
               <h3>{university.name}</h3>
               <a href={university.web_pages}>Visit website</a>
             </div>
