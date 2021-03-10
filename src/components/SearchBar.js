@@ -11,7 +11,11 @@ function SearchBar() {
     setPrint(false);
     setData(val.target.value);
   }
-
+  function handleKeypress (e) {
+  if (e.key === "Enter") {
+    setPrint(true);
+  }
+};
   return (
     <>
       <div className={styles.SearchBar}>
@@ -19,6 +23,7 @@ function SearchBar() {
           type="text"
           placeholder="Name of the country"
           onChange={getData}
+          onKeyPress={handleKeypress}
         />
         <button onClick={() => setPrint(true)}>Search</button>
       </div>
