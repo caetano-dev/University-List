@@ -33,7 +33,9 @@ function SearchBar() {
             <h1>Showing results for: {data}</h1>
             <University country={data} />
           </div>
-        ) : null}
+        ) : <>
+            <h2>Where do you want to study?</h2>
+            </>}
       </div>
     </>
   );
