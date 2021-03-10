@@ -11,11 +11,11 @@ function SearchBar() {
     setPrint(false);
     setData(val.target.value);
   }
-  function handleKeypress (e) {
-  if (e.key === "Enter") {
-    setPrint(true);
+  function handleKeypress(e) {
+    if (e.key === "Enter") {
+      setPrint(true);
+    }
   }
-};
   return (
     <>
       <div className={styles.SearchBar}>
@@ -30,12 +30,14 @@ function SearchBar() {
       <div className={styles.University}>
         {print ? (
           <div>
-            <h1>Showing results for: {data}</h1>
+            <h1>Showing results for: {data[0].toUpperCase() + data.substring(1)}</h1>
             <University country={data} />
           </div>
-        ) : <>
+        ) : (
+          <>
             <h2>Where do you want to study?</h2>
-            </>}
+          </>
+        )}
       </div>
     </>
   );
