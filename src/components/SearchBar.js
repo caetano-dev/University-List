@@ -21,22 +21,23 @@ function SearchBar() {
       <div className={styles.SearchBar}>
         <input
           type="text"
-          placeholder="Name of the country"
+          placeholder="Where do you want to study?"
           onChange={getData}
           onKeyPress={handleKeypress}
         />
         <button onClick={() => setPrint(true)}>Search</button>
       </div>
+
       <div className={styles.University}>
         {print ? (
           <div>
-            <h1>Showing results for: {data[0].toUpperCase() + data.substring(1)}</h1>
+            <h1>
+              Showing results for: {data[0].toUpperCase() + data.substring(1)}
+            </h1>
             <University country={data} />
           </div>
         ) : (
-          <>
-            <h2>Where do you want to study?</h2>
-          </>
+          <></>
         )}
       </div>
     </>
