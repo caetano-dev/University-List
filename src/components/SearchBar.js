@@ -6,10 +6,14 @@ import styles from "../styles/components/SearchBar.module.css";
 function SearchBar() {
   const [data, setData] = useState("");
   const [print, setPrint] = useState(false);
+  const [disableButton, setDisableButton] = useState(true);
 
   function getData(val) {
     setPrint(false);
     setData(val.target.value);
+    if (val.target.value) {
+      setDisableButton(false);
+    }
   }
   function handleKeypress(e) {
     if (e.key === "Enter") {
@@ -25,7 +29,9 @@ function SearchBar() {
           onChange={getData}
           onKeyPress={handleKeypress}
         />
-        <button onClick={() => setPrint(true)}>Search</button>
+        <button disabled={disableButton} onClick={() => setPrint(true)}>
+          Search
+        </button>
       </div>
 
       <div className={styles.University}>
