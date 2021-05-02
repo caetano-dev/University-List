@@ -37,7 +37,9 @@ function University(props) {
           return (
             <div className={styles.University} key={Math.random()}>
               <h3>{university.name}</h3>
-              <a href={university.web_pages}>Visit website</a>
+              <button>
+                <a href={university.web_pages}>Visit website</a>
+              </button>
             </div>
           );
         })}
