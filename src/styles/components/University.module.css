@@ -1,7 +1,6 @@
 .Container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .University {
@@ -28,7 +27,7 @@
 .University a {
   text-decoration: none;
 }
-.University button{
+.University button {
   width: 6rem;
   margin-top: 1.5rem;
   border: 1px solid black;
@@ -36,11 +35,29 @@
   background-color: rgb(233, 233, 233);
   transition: 0.2s;
 }
-.University button:hover{
+.University button:hover {
   background-color: rgb(255, 255, 255);
+}
+@media (max-width: 1200px) {
+  .Container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (max-width: 860px) {
   .University {
-    width: 10rem;
+    width: 16rem;
+  }
+}
+@media (max-width: 600px) {
+  .Container {
+    grid-template-columns: 1fr;
+  }
+
+  .University {
+    width: 100%;
+    margin: 1rem 0rem;
+  }
+  .University:hover {
+    transform: none;
   }
 }
