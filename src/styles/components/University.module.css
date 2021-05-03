@@ -4,16 +4,12 @@
 }
 
 .University {
-  background: radial-gradient(
-    circle,
-    rgb(45, 136, 255) 50%,
-    rgb(34, 95, 187) 100%
-  );
+  background: rgb(77, 153, 252);
   width: 23rem;
   box-shadow: 2px 2px 1px;
   margin: 1rem 1rem;
   padding: 1rem;
-  border: 0.5px solid black;
+  border: 0.1px solid black;
   border-radius: 0.5rem;
   transition: 0.2s;
 }
@@ -28,15 +24,15 @@
   text-decoration: none;
 }
 .University button {
+  background-color: rgb(131, 185, 255);
   width: 6rem;
   margin-top: 1.5rem;
   border: 1px solid black;
   border-radius: 0.5rem;
-  background-color: rgb(233, 233, 233);
   transition: 0.2s;
 }
 .University button:hover {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(119, 174, 247);
 }
 @media (max-width: 1200px) {
   .Container {
