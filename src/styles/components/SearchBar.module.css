@@ -3,14 +3,12 @@
   justify-content: center;
   margin: -1.3rem 0rem -1.3rem 0rem;
 }
-
 .SearchBar input,
 button {
   height: 2.5rem;
   border: 0px;
   outline: none;
 }
-
 .SearchBar input {
   width: 45%;
   border-radius: 0.5rem 0rem 0rem 0.5rem;
@@ -21,6 +19,10 @@ button {
   border-left: 1px solid gray;
   width: 5rem;
   transition: 0.5s;
+}
+.SearchBar button:disabled {
+  color: rgb(49, 49, 49);
+  background-color: rgb(192, 192, 192);
 }
 .SearchBar button:hover {
   background-color: rgb(218, 218, 218);
