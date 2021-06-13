@@ -4,6 +4,8 @@ import styles from "../styles/components/University.module.css";
 
 function University(props) {
   const [universityName, setUniversityName] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
+
   const [load, setLoad] = useState(true);
 
   const getUniversities = async () => {
@@ -33,16 +35,32 @@ function University(props) {
     <>
       <h2>{universityName.length} universities found.</h2>
       <div className={styles.Container}>
-        {universityName.map((university) => {
-          return (
-            <div className={styles.University} key={Math.random()}>
-              <h3>{university.name}</h3>
-              <button>
-                <a href={university.web_pages}>Visit website</a>
-              </button>
-            </div>
-          );
-        })}
+        {universityName
+          .slice(currentPage, currentPage + 21)
+          .map((university) => {
+            return (
+              <div className={styles.University} key={Math.random()}>
+                <h3>{university.name}</h3>
+                <button>
+                  <a href={university.web_pages}>Visit website</a>
+                </button>
+              </div>
+            );
+          })}
+      </div>
+      <div className={styles.ButtonsContainer}>
+        <button
+          className={styles.PreviousButton}
+          onClick={() => setCurrentPage(currentPage - 21)}
+        >
+          Previous
+        </button>
+        <button
+          className={styles.NextButton}
+          onClick={() => setCurrentPage(currentPage + 21)}
+        >
+          Next
+        </button>
       </div>
     </>
   );
