@@ -23,7 +23,9 @@
 .University a {
   text-decoration: none;
 }
-.University button {
+.University button,
+.PreviousButton,
+.NextButton {
   background-color: rgb(131, 185, 255);
   width: 6rem;
   margin-top: 1.5rem;
@@ -34,6 +36,16 @@
 .University button:hover {
   background-color: rgb(119, 174, 247);
 }
+.ButtonsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.PreviousButton,
+.NextButton {
+  background-color: rgb(77, 153, 252);
+  margin-bottom: 1.5rem;
+}
+
 @media (max-width: 1200px) {
   .Container {
     grid-template-columns: 1fr 1fr;
