@@ -11,7 +11,6 @@ function SearchBar() {
   function getData(val) {
     setPrint(false);
     setData(val.target.value);
-    console.log(val.target.value);
     if (val.target.value.length) {
       setDisableButton(false);
     }
