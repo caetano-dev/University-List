@@ -22,6 +22,21 @@ function University(props) {
   useEffect(() => {
     getUniversities();
   }, []);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+  const nextPage = () => {
+    setCurrentPage(currentPage + 21);
+    scrollToTop();
+  };
+
+  const previousPage = () => {
+    setCurrentPage(currentPage - 21);
+    scrollToTop();
+  };
   if (load) {
     return (
       <>
@@ -51,14 +66,11 @@ function University(props) {
       <div className={styles.ButtonsContainer}>
         <button
           className={styles.PreviousButton}
-          onClick={() => setCurrentPage(currentPage - 21)}
+          onClick={() => previousPage()}
         >
           Previous
         </button>
-        <button
-          className={styles.NextButton}
-          onClick={() => setCurrentPage(currentPage + 21)}
-        >
+        <button className={styles.NextButton} onClick={() => nextPage()}>
           Next
         </button>
       </div>
