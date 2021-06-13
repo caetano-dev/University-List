@@ -40,9 +40,7 @@ function SearchBar() {
       <div className={styles.University}>
         {print ? (
           <div>
-            <h1>
-              Showing results for: {data[0].toUpperCase() + data.substring(1)}
-            </h1>
+            <h1>{data[0].toUpperCase() + data.substring(1)}</h1>
             <University country={data} />
           </div>
         ) : (
