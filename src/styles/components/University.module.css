@@ -2,11 +2,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
 .University {
   background: rgb(77, 153, 252);
   width: 23rem;
-  box-shadow: 2px 2px 1px;
+  box-shadow: 0px 6px;
   margin: 1rem 1rem;
   padding: 1rem;
   border: 0.1px solid black;
@@ -16,7 +15,6 @@
 .University:hover {
   transform: translateY(-10px) translateX(-10px);
 }
-
 .University h3 {
   word-break: keep-all;
 }
@@ -31,6 +29,9 @@
   margin-top: 1.5rem;
   border: 1px solid black;
   border-radius: 0.5rem;
+  height: 2rem;
+  font-size: 1rem;
+  box-shadow: 0px 1px;
   transition: 0.2s;
 }
 .University button:hover {
@@ -44,8 +45,8 @@
 .NextButton {
   background-color: rgb(77, 153, 252);
   margin-bottom: 1.5rem;
+  cursor: pointer
 }
-
 @media (max-width: 1200px) {
   .Container {
     grid-template-columns: 1fr 1fr;

@@ -1,13 +1,15 @@
 .SearchBar {
   display: flex;
   justify-content: center;
-  margin: -1.3rem 0rem -1.3rem 0rem;
+  margin: -2.3rem 0rem -2.3rem 0rem;
 }
 .SearchBar input,
-button {
-  height: 2.5rem;
-  border: 0px;
+.SearchBar button {
+  height: 4rem;
+  border: 1px solid black;
   outline: none;
+  font-size: 1rem;
+  box-shadow: 0px 0px;
 }
 .SearchBar input {
   width: 45%;
