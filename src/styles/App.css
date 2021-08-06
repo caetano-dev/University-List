@@ -17,3 +17,8 @@ html {
   text-align: center;
   height: 30vh;
 }
+:root {
+  --Background: rgb(77, 153, 252);
+  --ButtonBackground: rgb(131, 185, 255);
+  --ButtonBackgroundHover: rgb(119, 174, 247);
+}

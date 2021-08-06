@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 .University {
-  background: rgb(77, 153, 252);
+  background: var(--Background);
   width: 23rem;
   box-shadow: 0px 6px;
   margin: 1rem 1rem;
@@ -24,8 +24,8 @@
 .University button,
 .PreviousButton,
 .NextButton {
-  background-color: rgb(131, 185, 255);
-  width: 6rem;
+  background-color: var(--ButtonBackground);
+  width: 7rem;
   margin-top: 1.5rem;
   border: 1px solid black;
   border-radius: 0.5rem;
@@ -35,7 +35,7 @@
   transition: 0.2s;
 }
 .University button:hover {
-  background-color: rgb(119, 174, 247);
+  background-color: var(--ButtonBackgroundHover);
 }
 .ButtonsContainer {
   display: flex;
@@ -43,7 +43,7 @@
 }
 .PreviousButton,
 .NextButton {
-  background-color: rgb(77, 153, 252);
+  background-color: var(--Background);
   margin-bottom: 1.5rem;
   cursor: pointer;
 }
