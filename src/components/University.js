@@ -1,24 +1,21 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import styles from "../styles/components/University.module.css";
+import axios from "axios";
 
 function University(props) {
   const [universityName, setUniversityName] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-
   const [load, setLoad] = useState(true);
-
-  const getUniversities = async () => {
-    const response = await fetch(
-      `http://universities.hipolabs.com/search?country=${props.country}`,
-      {
-        method: "GET",
-      }
-    );
-    const universities = await response.json();
-    setUniversityName(universities);
-    setLoad(false);
-  };
+  const url = `http://universities.hipolabs.com/search?country=${props.country}`
+  const getUniversities = () => {
+  axios.get(url)
+    .then(response => {
+      console.log(response.data)
+      setUniversityName(response.data);
+      setLoad(false)
+    })
+  }
   useEffect(() => {
     getUniversities();
   }, []);
