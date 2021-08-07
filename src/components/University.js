@@ -11,7 +11,6 @@ function University(props) {
   const getUniversities = () => {
   axios.get(url)
     .then(response => {
-      console.log(response.data)
       setUniversityName(response.data);
       setLoad(false)
     })
