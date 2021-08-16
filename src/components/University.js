@@ -7,14 +7,13 @@ function University(props) {
   const [universityName, setUniversityName] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [load, setLoad] = useState(true);
-  const url = `http://universities.hipolabs.com/search?country=${props.country}`
+  const url = `http://universities.hipolabs.com/search?country=${props.country}`;
   const getUniversities = () => {
-  axios.get(url)
-    .then(response => {
+    axios.get(url).then((response) => {
       setUniversityName(response.data);
-      setLoad(false)
-    })
-  }
+      setLoad(false);
+    });
+  };
   useEffect(() => {
     getUniversities();
   }, []);
@@ -26,9 +25,8 @@ function University(props) {
   };
   const nextPage = () => {
     setCurrentPage(currentPage + 21);
-    scrollToTop();
+    scrollToTop();    
   };
-
   const previousPage = () => {
     setCurrentPage(currentPage - 21);
     scrollToTop();
