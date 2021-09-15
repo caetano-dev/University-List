@@ -1,0 +1,42 @@
+.SearchBar {
+  display: flex;
+  justify-content: center;
+  margin: -2.3rem 0rem -2.3rem 0rem;
+}
+.SearchBar input,
+.SearchBar button {
+  height: 4rem;
+  border: 1px solid black;
+  outline: none;
+  font-size: 1rem;
+  box-shadow: 0px 0px;
+}
+.SearchBar input {
+  width: 45%;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  padding-left: 1rem;
+}
+.SearchBar button {
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  border-left: 1px solid gray;
+  width: 5rem;
+  transition: 0.5s;
+}
+.SearchBar button:disabled {
+  color: rgb(49, 49, 49);
+  background-color: rgb(192, 192, 192);
+}
+.SearchBar button:hover {
+  background-color: rgb(218, 218, 218);
+  cursor: pointer;
+}
+.University {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+.University h1 {
+  padding-top: 2rem;
+  color: rgb(3, 0, 90);
+}
