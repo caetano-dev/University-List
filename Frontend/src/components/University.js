@@ -29,19 +29,12 @@ function University(props) {
     };
     getUniversities();
   }, []);
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+
   const nextPage = () => {
     setCurrentPage(currentPage + 21);
-    scrollToTop();
   };
   const previousPage = () => {
     setCurrentPage(currentPage - 21);
-    scrollToTop();
   };
   if (load) {
     return (
