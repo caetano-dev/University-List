@@ -10,11 +10,14 @@ function SearchBar() {
 
   function getCountry(val) {
     setPrint(false);
-    setCountry(val.target.value);
-    if (val.target.value.length) {
+    const inputValue = val.target.value;
+
+    if (inputValue.length && inputValue.trim() != "") {
+      const formatedCountryName =
+        inputValue[0].toUpperCase() + inputValue.substring(1);
+      setCountry(formatedCountryName);
       setDisableButton(false);
-    }
-    if (val.target.value === "") {
+    } else {
       setDisableButton(true);
     }
   }
@@ -28,7 +31,7 @@ function SearchBar() {
       <div className={styles.SearchBar}>
         <input
           type="text"
-          placeholder="Where do you want to study?"
+          placeholder="Country name"
           onChange={getCountry}
           onKeyPress={handleKeypress}
         />
@@ -40,7 +43,7 @@ function SearchBar() {
       <div className={styles.University}>
         {print ? (
           <div>
-            <h1>{country[0].toUpperCase() + country.substring(1)}</h1>
+            <h1>{country}</h1>
             <University country={country} />
           </div>
         ) : (
