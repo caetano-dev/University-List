@@ -3,13 +3,13 @@
   text-align: center;
 }
 .Header h1 {
-  color: rgb(77, 153, 252);
+  color: var(--CardBackground);
   font-size: 2.5rem;
   text-shadow: -1px 3px 0px rgba(0, 0, 0, 0.445);
 }
 .Header strong {
   font-size: 1.2rem;
-  color: rgb(0, 16, 37);
+  color: var(--Strong);
 }
 @media (max-width: 600px) {
   .Header h1 {
