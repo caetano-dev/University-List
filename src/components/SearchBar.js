@@ -12,7 +12,7 @@ function SearchBar() {
     setPrint(false);
     const inputValue = val.target.value;
 
-    if (inputValue.length && inputValue.trim() != "") {
+    if (inputValue.length && inputValue.trim() !== "") {
       const formatedCountryName =
         inputValue[0].toUpperCase() + inputValue.substring(1);
       setCountry(formatedCountryName);

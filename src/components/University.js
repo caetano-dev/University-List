@@ -10,7 +10,7 @@ function University(props) {
   useEffect(() => {
     const getUniversities = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api", {
+        const response = await fetch("https://universitylist.herokuapp.com/api", {
           method: "POST",
           mode: "cors",
           headers: {
