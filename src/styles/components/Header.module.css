@@ -1,32 +1,18 @@
-.headerImage {
-  background-image: url("../../assets/harvard.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter: blur(2px);
-  height: 60vh;
+.Header {
+  padding-top: 10vh;
+  text-align: center;
 }
-.container {
-  top: 30%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
+.Header h1 {
+  color: var(--CardBackground);
+  font-size: 2.5rem;
+  text-shadow: -1px 3px 0px rgba(0, 0, 0, 0.445);
 }
-.container h1,
-h2 {
-  font-family: "roboto", sans-serif;
-  color: var(--h1h2color);
-  padding-left: 5rem;
+.Header strong {
+  font-size: 1.2rem;
+  color: var(--Strong);
 }
-
-.container h1 {
-  font-size: 4rem;
+@media (max-width: 600px) {
+  .Header h1 {
+    font-size: 1.5rem;
+  }
 }
-.container h2 {
-  font-size: 2rem;
-}
-

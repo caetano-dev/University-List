@@ -1,10 +1,15 @@
 import React from "react";
-import Header from "./components/Header";
+import "./styles/App.css";
+import SearchBar from "./components/SearchBar";
+import Header from "./components/Header"
 
 export default function App() {
-  return (
+  return(
     <>
-      <Header />
-    </>
-  );
+    <div className="Container">
+    <Header/>
+    </div>
+    <SearchBar/>
+</>
+  )
 }

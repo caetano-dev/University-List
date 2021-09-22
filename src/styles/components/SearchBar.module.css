@@ -1,24 +1,42 @@
-.container {
-  top: 40%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  position: absolute;
+.SearchBar {
   display: flex;
+  justify-content: center;
+  margin: -2.3rem 0rem -2.3rem 0rem;
 }
-
-input,
-button {
-  outline: none;
-  border: none;
+.SearchBar input,
+.SearchBar button {
   height: 4rem;
+  border: 1px solid black;
+  outline: none;
+  font-size: 1rem;
+  box-shadow: 0px 0px;
 }
-input {
-  padding-left: 1rem;
-  width: 50rem;
+.SearchBar input {
+  width: 45%;
   border-radius: 0.5rem 0rem 0rem 0.5rem;
+  padding-left: 1rem;
 }
-
-button {
-  width: 5rem;
+.SearchBar button {
   border-radius: 0rem 0.5rem 0.5rem 0rem;
+  border-left: 1px solid gray;
+  width: 5rem;
+  transition: 0.5s;
+}
+.SearchBar button:disabled {
+  color: var(--DisabledButton);
+  background-color: var(--DisabledButtonBackground);
+}
+.SearchBar button:hover {
+  background-color: var(--HoverButton);
+  cursor: pointer;
+}
+.University {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+.University h1 {
+  padding-top: 2rem;
+  color: var(--UniversityH1);
 }
