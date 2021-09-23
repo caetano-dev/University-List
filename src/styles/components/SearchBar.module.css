@@ -21,4 +21,5 @@ input {
 button {
   width: 5rem;
   border-radius: 0rem 0.5rem 0.5rem 0rem;
+  cursor: pointer;
 }
