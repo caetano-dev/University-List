@@ -3,21 +3,31 @@ import styles from "../styles/components/SearchBar.module.css";
 import { useState, useEffect } from "react";
 
 function SearchBar() {
-  //  const [country, setCountry] = useState("");
-  const [print, setPrint] = useState(false);
+  const [country, setCountry] = useState("");
+  const [disabled, setDisabled] = useState(false);
+  //const [print, setPrint] = useState(false);
 
-  function getCountryName(val) {
-    const inputValue = val.target.value;
-
+  function validateInput(inputValue) {
     if (inputValue.length && inputValue.trim() !== "") {
+      return true;
+    }
+    return false;
+  }
+
+  function setCountryName(val) {
+    const inputValue = val.target.value;
+    if (validateInput(inputValue)) {
       const formatedCountryName =
         inputValue[0].toUpperCase() + inputValue.substring(1);
-      //setCountry(formatedCountryName);
+
+      setCountry(formatedCountryName);
+      setDisabled(false);
     }
   }
+
   function handleKeypress(e) {
     if (e.key === "Enter") {
-      setPrint(true);
+      //press button
     }
   }
 
@@ -25,12 +35,14 @@ function SearchBar() {
     <div className={styles.container}>
       <input
         type="text"
-        onChange={getCountryName}
+        onChange={setCountryName}
         onKeyPress={handleKeypress}
         type="text"
         placeholder="Search country"
       />
-      <button>Search</button>
+      <button disabled={disabled}>Search</button>
+
+      <h1>{country}</h1>
     </div>
   );
 }
