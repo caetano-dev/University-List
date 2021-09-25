@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/components/SearchBar.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function SearchBar() {
   const [country, setCountry] = useState("");
@@ -27,7 +27,7 @@ function SearchBar() {
 
   function handleKeypress(e) {
     if (e.key === "Enter") {
-      //press button
+      //pressed button action
     }
   }
 
@@ -41,8 +41,6 @@ function SearchBar() {
         placeholder="Search country"
       />
       <button disabled={disabled}>Search</button>
-
-      <h1>{country}</h1>
     </div>
   );
 }
