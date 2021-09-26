@@ -37,8 +37,8 @@ function UniversityList() {
         <UniversityCard
           key={Math.random()}
           name={university.name}
-          web_page={university.web_page}
-          domain={university.domain}
+          web_page={university.web_pages[0]}
+          domain={university.domains[0]}
         />
       ))}
     </div>
