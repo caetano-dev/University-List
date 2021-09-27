@@ -6,7 +6,7 @@ function Header() {
     <>
       <div className={styles.headerImage}></div>
       <div className={styles.container}>
-        <h1>university search</h1>
+        <h1>University Search</h1>
         <h2>Find universities around the world.</h2>
       </div>
       <SearchBar />
