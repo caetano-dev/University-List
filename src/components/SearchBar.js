@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "../styles/components/SearchBar.module.css";
-import { useState, useContext } from "react";
-import { SearchBarContext } from "../context/SearchBarContext";
+import { useState } from "react";
+
+import UniversityList from "./UniversityList";
 
 function SearchBar() {
   const [country, setCountry] = useState("");
   const [disabled, setDisabled] = useState(false);
   //const [print, setPrint] = useState(false);
-  const countryContext = useContext(SearchBarContext);
 
   function validateInput(inputValue) {
     if (inputValue.length && inputValue.trim() !== "") {
@@ -23,29 +23,31 @@ function SearchBar() {
         inputValue[0].toUpperCase() + inputValue.substring(1);
 
       setCountry(formatedCountryName);
+      console.log("country set");
       setDisabled(false);
     }
   }
 
   function handleKeypress(e) {
     if (e.key === "Enter") {
-      //pressed button action
+      setCountryName();
     }
   }
 
   return (
-    <div className={styles.container}>
-      <input
-        type="text"
-        onChange={setCountryName}
-        onKeyPress={handleKeypress}
-        type="text"
-        placeholder="Search country"
-      />
-      <button disabled={disabled} onClick={setCountryName}>
-        Search
-      </button>
-    </div>
+    <>
+      <div className={styles.container}>
+        <input
+          type="text"
+          onKeyPress={handleKeypress}
+          placeholder="Search country"
+        />
+        <button disabled={disabled} onClick={setCountryName}>
+          Search
+        </button>
+      </div>
+      <UniversityList countryName={country} />
+    </>
   );
 }
 
