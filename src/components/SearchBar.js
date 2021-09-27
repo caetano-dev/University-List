@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "../styles/components/SearchBar.module.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { SearchBarContext } from "../context/SearchBarContext";
 
 function SearchBar() {
   const [country, setCountry] = useState("");
   const [disabled, setDisabled] = useState(false);
   //const [print, setPrint] = useState(false);
+  const countryContext = useContext(SearchBarContext);
 
   function validateInput(inputValue) {
     if (inputValue.length && inputValue.trim() !== "") {
@@ -40,7 +42,9 @@ function SearchBar() {
         type="text"
         placeholder="Search country"
       />
-      <button disabled={disabled}>Search</button>
+      <button disabled={disabled} onClick={setCountryName}>
+        Search
+      </button>
     </div>
   );
 }

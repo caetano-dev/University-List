@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "../styles/components/UniversityList.module.css";
 import UniversityCard from "./UniversityCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { SearchBarContext } from "../context/SearchBarContext";
 
 function UniversityList() {
   const [universities, setUniversities] = useState([]);
   const [load, setLoad] = useState(false);
+  const country = useContext(SearchBarContext);
 
   useEffect(() => {
     const getUniversities = async () => {
@@ -17,8 +19,7 @@ function UniversityList() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            //msg: props.country,
-            msg: "brazil",
+            msg: country,
           }),
         });
         const jsonData = await response.json();
