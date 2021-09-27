@@ -19,7 +19,7 @@
 .container h1,
 h2 {
   font-family: "roboto", sans-serif;
-  color: var(--h1h2color);
+  color: var(--h1h2h3color);
   padding-left: 5rem;
 }
 

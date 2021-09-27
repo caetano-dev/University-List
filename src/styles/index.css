@@ -17,5 +17,12 @@ code {
 }
 
 :root{
-  --h1h2color: #ffd5d5;
+  --h1h2h3color: #ffffff;
+  --background: #a39c8f;
+  --cardBackground: #462025;
+  --boxShadow: #5c2930;
+  --link: #70798c;
+
+  /*gray a39c8f*/
+  /*brown 462025*/
 }
