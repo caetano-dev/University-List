@@ -3,10 +3,10 @@ import styles from "../styles/components/UniversityList.module.css";
 import UniversityCard from "./UniversityCard";
 import { useState, useEffect } from "react";
 
-function UniversityList({countryName}) {
+function UniversityList({ countryName }) {
   const [universities, setUniversities] = useState([]);
   const [load, setLoad] = useState(false);
-;
+
   useEffect(() => {
     const getUniversities = async () => {
       try {
@@ -28,7 +28,7 @@ function UniversityList({countryName}) {
       }
     };
     getUniversities();
-  }, []);
+  }, [countryName]);
 
   return (
     <div className={styles.container}>
