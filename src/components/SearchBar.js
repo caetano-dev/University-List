@@ -5,36 +5,27 @@ import UniversityList from "./UniversityList";
 
 function SearchBar() {
   const [country, setCountry] = useState("");
-  const [disabled, setDisabled] = useState(false);
   let textInput = createRef();
 
-  function validateInput(inputValue) {
-    if (inputValue.length && inputValue.trim() !== "") {
-      return true;
-    }
-    return false;
-  }
-  //rewrite this
-  function setCountryName(val) {
+  function validateInput() {
     const inputValue = textInput.current.value;
-
-    if (validateInput(inputValue)) {
+    if (inputValue.length && inputValue.trim() !== "") {
       const formatedCountryName =
         inputValue[0].toUpperCase() + inputValue.substring(1);
-
-      setCountry(formatedCountryName);
-      setDisabled(false);
+      return formatedCountryName;
     }
+    return "";
+  }
+  function handleClick() {
+    const validatedCountryName = validateInput();
+    setCountry(validatedCountryName);
   }
 
   function handleKeypress(e) {
     if (e.key === "Enter") {
+      handleClick();
     }
   }
-  function handleClick() {
-    setCountry(textInput.current.value);
-  }
-
   return (
     <>
       <div className={styles.container}>
@@ -44,9 +35,7 @@ function SearchBar() {
           onKeyPress={handleKeypress}
           placeholder="Search country"
         />
-        <button disabled={disabled} onClick={handleClick}>
-          Search
-        </button>
+        <button onClick={handleClick}>Search</button>
       </div>
       <UniversityList countryName={country} />
     </>
