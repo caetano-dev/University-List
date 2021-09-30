@@ -6,3 +6,7 @@
   grid-gap: 1rem;
   background-color: var(--background);
 }
+.loading {
+  background-color: var(--background);
+  height: 100vh;
+}

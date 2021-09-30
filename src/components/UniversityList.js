@@ -10,6 +10,7 @@ function UniversityList({ countryName }) {
   useEffect(() => {
     const getUniversities = async () => {
       try {
+        setLoad(true);
         const response = await fetch("http://localhost:8080/api", {
           method: "POST",
           mode: "cors",
@@ -32,14 +33,18 @@ function UniversityList({ countryName }) {
 
   return (
     <div className={styles.container}>
-      {universities.map((university) => (
-        <UniversityCard
-          key={Math.random()}
-          name={university.name}
-          web_page={university.web_pages[0]}
-          domain={university.domains[0]}
-        />
-      ))}
+      {load ? (
+        <div className={styles.loading}></div>
+      ) : (
+        universities.map((university) => (
+          <UniversityCard
+            key={Math.random()}
+            name={university.name}
+            web_page={university.web_pages[0]}
+            domain={university.domains[0]}
+          />
+        ))
+      )}
     </div>
   );
 }
