@@ -1,5 +1,9 @@
-body {
+* {
   margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +14,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+:root{
+  --h1h2h3color: #ffffff;
+  --background: #a39c8f;
+  --cardBackground: #462025;
+  --boxShadow: #5c2930;
+  --link: #70798c;
+
+  /*gray a39c8f*/
+  /*brown 462025*/
 }

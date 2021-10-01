@@ -1,0 +1,18 @@
+.container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  background-color: var(--background);
+}
+.loading {
+  background-color: var(--background);
+  height: 100vh;
+}
+
+@media screen and (max-width: 665px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

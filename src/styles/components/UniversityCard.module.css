@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 10rem;
+  max-width: 30rem;
+  width: 60%;
+  height: 8rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--cardBackground);
+  color: var(--h1h2h3color);
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.747) 0.1rem 0.3rem 0.5rem;
+}
+.container a {
+  color: var(--link);
+  text-decoration: none;
+}
