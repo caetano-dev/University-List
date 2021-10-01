@@ -11,16 +11,19 @@ function UniversityList({ countryName }) {
     const getUniversities = async () => {
       try {
         setLoad(true);
-        const response = await fetch("http://localhost:8080/api", {
-          method: "POST",
-          mode: "cors",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            msg: countryName,
-          }),
-        });
+        const response = await fetch(
+          "https://universitylist.herokuapp.com/api",
+          {
+            method: "POST",
+            mode: "cors",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              msg: countryName,
+            }),
+          }
+        );
         const jsonData = await response.json();
         setUniversities(jsonData);
         setLoad(false);
