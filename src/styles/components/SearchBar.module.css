@@ -4,7 +4,7 @@
   transform: translate(-50%, -50%);
   position: absolute;
   display: flex;
-  width: 60%;
+  width: 50%;
 }
 
 input,
@@ -28,5 +28,6 @@ button {
 @media screen and (max-width: 665px) {
   .container {
     left: 50%;
+    width: 70%;
   }
 }
