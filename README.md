@@ -4,7 +4,7 @@
 
 ![screenshot](./.github/screenshot.png)
 
-You can visit the website by clicking [here](university-e655oypht-drull1000.vercel.app).
+You can visit the website by clicking [here](https://university-e655oypht-drull1000.vercel.app).
 
 # Want to contribute?
 
