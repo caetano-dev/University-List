@@ -1,9 +1,10 @@
 .container {
-  top: 40%;
+  top: 45%;
   left: 70%;
   transform: translate(-50%, -50%);
   position: absolute;
   display: flex;
+  width: 60%;
 }
 
 input,
@@ -14,7 +15,7 @@ button {
 }
 input {
   padding-left: 1rem;
-  width: 50rem;
+  width: 90%;
   border-radius: 0.5rem 0rem 0rem 0.5rem;
 }
 
@@ -22,4 +23,10 @@ button {
   width: 5rem;
   border-radius: 0rem 0.5rem 0.5rem 0rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 665px) {
+  .container {
+    left: 50%;
+  }
 }

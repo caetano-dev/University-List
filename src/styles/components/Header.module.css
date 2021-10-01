@@ -9,6 +9,7 @@
 .container {
   top: 30%;
   left: 20%;
+  padding-left: 20%;
   transform: translate(-50%, -50%);
   position: absolute;
   display: flex;
@@ -20,7 +21,6 @@
 h2 {
   font-family: "roboto", sans-serif;
   color: var(--h1h2h3color);
-  padding-left: 5rem;
 }
 
 .container h1 {
@@ -30,3 +30,17 @@ h2 {
   font-size: 2rem;
 }
 
+@media screen and (max-width: 665px) {
+  .container {
+    left: 50%;
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+  }
+  .container h1 {
+    font-size: 3rem;
+  }
+  .container h2 {
+    font-size: 1rem;
+  }
+}
