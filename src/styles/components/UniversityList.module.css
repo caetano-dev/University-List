@@ -1,3 +1,9 @@
+.wrapper {
+  text-align: center;
+  background-color: var(--background);
+  color: var(--h1h2h3color);
+  padding: 1rem;
+}
 .container {
   display: grid;
   align-items: center;

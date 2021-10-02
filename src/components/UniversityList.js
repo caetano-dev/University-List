@@ -11,19 +11,16 @@ function UniversityList({ countryName }) {
     const getUniversities = async () => {
       try {
         setLoad(true);
-        const response = await fetch(
-          "https://universitylist.herokuapp.com/api",
-          {
-            method: "POST",
-            mode: "cors",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              msg: countryName,
-            }),
-          }
-        );
+        const response = await fetch("https://universitylist.herokuapp.com/api", {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            msg: countryName,
+          }),
+        });
         const jsonData = await response.json();
         setUniversities(jsonData);
         setLoad(false);
@@ -35,18 +32,23 @@ function UniversityList({ countryName }) {
   }, [countryName]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       {load ? (
-        <div className={styles.loading}></div>
+        <h1 className={styles.loading}>Loading...</h1>
       ) : (
-        universities.map((university) => (
-          <UniversityCard
-            key={Math.random()}
-            name={university.name}
-            web_page={university.web_pages[0]}
-            domain={university.domains[0]}
-          />
-        ))
+        <>
+          <h1 className={styles.wrapper}>{countryName}</h1>
+          <div className={styles.container}>
+            {universities.map((university) => (
+              <UniversityCard
+                key={Math.random()}
+                name={university.name}
+                web_page={university.web_pages[0]}
+                domain={university.domains[0]}
+              />
+            ))}
+          </div>
+        </>
       )}
     </div>
   );
