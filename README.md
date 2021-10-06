@@ -9,6 +9,10 @@ You can visit the website by clicking [here](https://university-e655oypht-drull1
 # Want to contribute?
 
 You can clone this repository and the [backend](https://github.com/drull1000/universityBackend) of it in order to add new changes.
+Remember to create a .env file in the root directory of the repository and add the following lines:
+
+    REACT_APP_SERVER = http://localhost:8080/api
+
 Any pull requests are welcome.
 
 # Acknowledgments
