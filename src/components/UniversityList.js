@@ -11,7 +11,7 @@ function UniversityList({ countryName }) {
     const getUniversities = async () => {
       try {
         setLoad(true);
-        const response = await fetch("https://universitylist.herokuapp.com/api", {
+        const response = await fetch(process.env.REACT_APP_SERVER, {
           method: "POST",
           mode: "cors",
           headers: {
